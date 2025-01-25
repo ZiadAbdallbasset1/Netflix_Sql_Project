@@ -23,10 +23,10 @@ The data for this project is sourced from the Kaggle dataset:
 
 ```sql
 SELECT 
-    type,
-    COUNT(*)
-FROM netflix
-GROUP BY 1;
+    [type],
+    COUNT(*) AS Total_Content_By_Type
+FROM netflix_titles$
+GROUP BY [type];
 ```
 
 **Objective:** Determine the distribution of content types on Netflix.
