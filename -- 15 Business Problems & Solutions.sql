@@ -35,10 +35,11 @@ WHERE [type] = 'Movie' AND release_year = 2020
 
 -- 4. Find the top 5 countries with the most content on Netflix
 
-SELECT 
-    (),
+SELECT TOP 5
+    country,
     COUNT(*)
 FROM netflix_titles$
+WHERE country IS NOT NULL
 GROUP BY country
 ORDER BY COUNT(*) DESC
 
